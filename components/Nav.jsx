@@ -7,8 +7,6 @@ import { oswald, ebgar } from "@/app/fonts";
 const Nav = () => {
   const [toggleDropDown, setToggleDropDown] = useState(false);
 
-  console.log(toggleDropDown);
-
   return (
     <>
       <div className="navigation">
@@ -18,6 +16,7 @@ const Nav = () => {
             width={40}
             height={40}
             className="navigation_menu"
+            alt="hamburguer_icon"
             onClick={() => setToggleDropDown((prev) => !prev)}
           />
           <div className="nav_title">
@@ -37,6 +36,7 @@ const Nav = () => {
                 width={20}
                 height={20}
                 className="search_icon"
+                alt="search_icon"
               />
               <input type="search" placeholder="Search our stock" />
             </div>
@@ -46,7 +46,7 @@ const Nav = () => {
             </h3>
           </div>
           <div className="nav_bag">
-            <Image src="/assets/cauldron.png" width={40} height={40} />
+            <Image src="/assets/cauldron.png" alt="cauldron_icon" width={40} height={40} />
             <h4
               className={oswald.className}
               style={{ color: "#ccc", fontSize: "13px" }}
@@ -61,6 +61,7 @@ const Nav = () => {
                   src="/assets/close.png"
                   width={30}
                   height={30}
+                  alt="close_icon"
                   className="navigation_menu"
                   onClick={() => setToggleDropDown((prev) => !prev)}
                 />
@@ -70,6 +71,7 @@ const Nav = () => {
                     width={20}
                     height={20}
                     className="search_icon"
+                    alt="search_icon"
                   />
                   <input type="search" placeholder="Search our stock" />
                 </div>
@@ -85,6 +87,7 @@ const Nav = () => {
         </div>
       </div>
       <div className="nav_menu_container">
+        <div className="menu_container">
         <div className="nav_menu">
           <ul>
             <li className={ebgar.className}>Potions ▾</li>
@@ -97,10 +100,11 @@ const Nav = () => {
         </div>
         <div className="nav_sign">
           <ul>
-            <li className={ebgar.className}>Sign in</li>
+            <li className={ebgar.className} id="signHover">Sign in</li>
             <li className={ebgar.className}>or</li>
-            <li className={ebgar.className}>Sign Up</li>
+            <li className={ebgar.className} id="signHover">Sign Up</li>
           </ul>
+          </div>
         </div>
       </div>
     </>

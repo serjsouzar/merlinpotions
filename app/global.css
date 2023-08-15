@@ -18,7 +18,7 @@
   justify-content: space-around;
   text-align: center;
   width: 100%;
-  max-width: 1256px;
+  max-width: 1150px;
   padding: 20px;
 }
 
@@ -73,14 +73,12 @@
 .nav_menu_container {
   width: 100%;
   background: #523468;
-  height: 50px
+  height: 50px;
 }
 
 .nav_menu {
   display: flex;
-  max-width: 1256px;
-  height: 49px;
-  align-items: center
+  align-items: center;
 }
 
 .nav_menu li {
@@ -88,39 +86,72 @@
   font-weight: 500px;
   color: #fff;
   padding: 8px;
-  border-radius: 7px
+  border-radius: 7px;
 }
 
 .nav_menu li:hover {
   transition: all ease 0.3s;
   background: #674283;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .nav_menu ul {
   display: flex;
-  justify-content: end;
-  width: 78%;
-  gap: 47px;
 }
 
 .nav_sign {
   display: flex;
 }
 
+.nav_sign ul {
+  width: 180px;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  align-items: center;
+}
+
+.nav_sign li {
+  color: #fff;
+}
+
+.nav_menu_container {
+  width: 100%;
+  display: flex;
+  justify-content: center
+}
+
+.menu_container {
+  display: flex;
+  width: 1440px;
+  justify-content: space-around;
+}
+
+
+#signHover {
+  padding: 8px;
+  border-radius: 7px;
+}
+
+#signHover:hover {
+  transition: all ease 0.3s;
+  background: #674283;
+  cursor: pointer;
+}
+
 @media (max-width: 780px) {
   .nav_title {
-    height: 28vh;
+    padding-top: 60px
   }
 
   .nav_menu_container {
-    display: none
+    display: none;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
   .nav_title {
-    height: 30vh;
+    height: 80px;
   }
 }
 
