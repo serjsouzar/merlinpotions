@@ -40,7 +40,6 @@ const Nav = () => {
               />
               <input type="search" placeholder="Search our stock" />
             </div>
-            <div className="subTitle-background"></div>
             <h3 className={ebgar.className}>
               Free shipping on orders over $50
             </h3>
@@ -86,6 +85,7 @@ const Nav = () => {
           )}
         </div>
       </div>
+      <div className="subTitle-background"></div>
       <div className="nav_menu_container">
         <div className="menu_container">
         <div className="nav_menu">

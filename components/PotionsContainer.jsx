@@ -8,7 +8,7 @@ const PotionsContainer = ({ potions }) => {
       <ul className="potions_section">
         {potions?.map((potion) => (
           <li key={potion.id}>
-            <Potion potionName={potion.name} potionImage={potion.image} />
+            <Potion potionName={potion.name} potionImage={potion.image} potionPrice={potion.price}/>
           </li>
         ))}
       </ul>

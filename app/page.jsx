@@ -18,9 +18,10 @@ const Home = () => {
   return (
     <>
       <Nav />
-      <PotionsContainer potions={potions} />
+      <PotionsContainer potions={potions} />      
     </>
   );
 };
 
 export default Home;
+

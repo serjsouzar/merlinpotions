@@ -141,7 +141,7 @@
 
 @media (max-width: 780px) {
   .nav_title {
-    padding-top: 60px;
+    padding-top: 46px;
   }
 
   .nav_menu_container {
@@ -149,11 +149,6 @@
   }
 }
 
-@media (max-width: 400px) {
-  .nav_title {
-    height: 80px;
-  }
-}
 
 @media (max-width: 780px) {
   .navigation {
@@ -198,11 +193,11 @@
   }
 
   .subTitle-background {
-    width: 150%;
+    width: 100%;
     background: #ccc;
-    height: 27px;
+    height: 25px;
     position: relative;
-    top: 30px;
+    top: 18px;
   }
 
   .navigation_container {
@@ -268,17 +263,56 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 70vh;
+  height: 83vh;
   align-items: center;
 }
 
 .potions_section {
   width: 1070px;
   border: 1px solid black;
-  height: 50vh;
+  height: 68vh;
 
   display: flex;
   list-style: none;
   justify-content: space-around;
   flex-wrap: wrap;
+
+  .potion_card {
+    padding: 50px;
+  }
+
+  .potion_image {
+    width: 180px;
+    height: 180px
+  }
+
+  .potion_name {
+    width: 185px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  @media (max-width: 780px) {
+    .potions_section {
+      justify-content: center
+    }
+
+    .potion_image {
+      width: 100px;
+      height: 100px
+    }
+  
+    .potion_card {
+      padding: 0
+    }
+
+    .potion_name {
+      width: 125px;
+    }
+
+    .potion_name h3 { 
+      font-size: 10px
+    }
+  }
 }
