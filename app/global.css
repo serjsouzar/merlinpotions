@@ -276,6 +276,18 @@
   align-items: center;
 }
 
+.potion_name {
+  text-align: right;
+}
+
+.potion_name_container {
+  width: 199px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
 .potions_section {
   width: 1070px;
   height: 68vh;
@@ -284,67 +296,79 @@
   list-style: none;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+.potion_card {
+  width: 174px;
+  padding: 50px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
 
-  .potion_card {
-    padding: 50px;
+.potion_card:hover {
+  transform: scale(0.9);
+  transition: all ease 0.1s;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 36px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.potion_image {
+  width: 180px;
+  height: 180px;
+}
+
+.potion_price {
+  color: #e44104;
+  font-size: 18px;
+}
+
+@media (max-width: 780px) {
+  .potions_section {
+    justify-content: center;
+    transition: all ease 0.3s;
   }
 
   .potion_image {
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
+    transition: all ease 0.3s;
+  }
+
+  .potion_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    padding-bottom: 15px;
+    transition: all ease 0.3s;
   }
 
   .potion_name_container {
-    width: 185px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+  }
+
+  .potion_name {
+    width: 90px;
+    font-size: 12px;
+    transition: all ease 0.3s;
+  }
+
+  .potion_name h3 {
+    font-size: 13px;
+    transition: all ease 0.3s;
   }
 
   .potion_price {
-    color: #e44104;
-    font-size: 18px;
+    font-size: 13px;
   }
 
-  @media (max-width: 780px) {
-    .potions_section {
-      justify-content: center;
-    }
-
-    .potion_image {
-      width: 150px;
-      height: 150px;
-    }
-
-    .potion_card {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      padding: 0;
-      padding-bottom: 15px
-    }
-
-    .potion_name_container {
-      justify-content: center;
-    }
-
-    .potion_name {
-      width: 90px;
-      font-size: 13px;
-    }
-
-    .potion_name h3 {
-      font-size: 10px;
-    }
-
-    .potion_price {
-      font-size: 13px;
-    }
-
-    .potions_section li {
-      display: flex;
-    }
+  .potions_section li {
+    display: flex;
   }
 }
 
