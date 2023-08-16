@@ -149,6 +149,14 @@
   }
 }
 
+@media (min-width: 781px) {
+  .nav_dropdown_search {
+    display: none;
+  }
+  .nav_dropdown p {
+    display: none;
+  }
+}
 
 @media (max-width: 780px) {
   .navigation {
@@ -217,6 +225,7 @@
     justify-content: flex-end;
     align-items: flex-start;
     z-index: 2;
+    overflow-x: hidden;
   }
 
   .nav_dropdown p {
@@ -269,7 +278,6 @@
 
 .potions_section {
   width: 1070px;
-  border: 1px solid black;
   height: 68vh;
 
   display: flex;
@@ -283,36 +291,87 @@
 
   .potion_image {
     width: 180px;
-    height: 180px
+    height: 180px;
   }
 
-  .potion_name {
+  .potion_name_container {
     width: 185px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
   }
 
+  .potion_price {
+    color: #e44104;
+    font-size: 18px;
+  }
+
   @media (max-width: 780px) {
     .potions_section {
-      justify-content: center
+      justify-content: center;
     }
 
     .potion_image {
-      width: 100px;
-      height: 100px
+      width: 150px;
+      height: 150px;
     }
-  
+
     .potion_card {
-      padding: 0
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0;
+      padding-bottom: 15px
+    }
+
+    .potion_name_container {
+      justify-content: center;
     }
 
     .potion_name {
-      width: 125px;
+      width: 90px;
+      font-size: 13px;
     }
 
-    .potion_name h3 { 
-      font-size: 10px
+    .potion_name h3 {
+      font-size: 10px;
+    }
+
+    .potion_price {
+      font-size: 13px;
+    }
+
+    .potions_section li {
+      display: flex;
     }
   }
+}
+
+/* Potion Modal */
+
+.potion_modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  z-index: 10;
+  position: relative;
+  width: 680px;
+  height: 470px;
+  left: 30%;
+  top: 20%;
+  opacity: 1;
+  background-color: #fff;
+  max-width: 50%;
+}
+
+.overlay_modal {
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(150, 150, 150, 0.5);
 }

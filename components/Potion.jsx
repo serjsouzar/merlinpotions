@@ -1,17 +1,49 @@
-import Image from 'next/image'
-import React from 'react'
+"use client";
+import Image from "next/image";
+import React from "react";
+import ReactModal from "react-modal";
+import { useState } from "react";
+import PotionModal from "./PotionModal";
 
-const Potion = ({potionName, potionImage,potionPrice}) => {
+const Potion = ({ potionName, potionImage, potionPrice, onRequestOpen }) => {
+
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
   return (
-    <div className="potion_card">
-      <Image className="potion_image" width={180} height={180} alt={potionName} src={potionImage} />
-      <div className='potion_name'>
-      <h3>{potionName}</h3>
-      -
-      <p>{potionPrice}</p>
+    <>
+      <div className="potion_card" onClick={openModal}>
+        <Image
+          className="potion_image"
+          width={180}
+          height={180}
+          alt={potionName}
+          src={potionImage}
+        />
+        <div className="potion_name_container">
+          <h3 className="potion_name">{potionName}</h3>-
+          <p className="potion_price">${potionPrice}</p>
+        </div>
       </div>
-    </div>
-  )
-}
 
-export default Potion
+      <ReactModal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        ariaHideApp={false}
+        className="potion_modal"
+        overlayClassName="overlay_modal"
+      >
+        <PotionModal onRequestClose={closeModal} name={potionName}/>
+      </ReactModal>
+    </>
+  );
+};
+
+export default Potion;

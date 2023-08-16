@@ -1,14 +1,17 @@
-"use client";
-
 import Potion from "./Potion";
 
-const PotionsContainer = ({ potions }) => {
+const PotionsContainer = ({ potions, onRequestOpen }) => {
+
   return (
     <section className="section_container">
       <ul className="potions_section">
         {potions?.map((potion) => (
           <li key={potion.id}>
-            <Potion potionName={potion.name} potionImage={potion.image} potionPrice={potion.price}/>
+            <Potion
+              potionName={potion.name}
+              potionImage={potion.image}
+              potionPrice={potion.price}
+            />
           </li>
         ))}
       </ul>
@@ -17,3 +20,7 @@ const PotionsContainer = ({ potions }) => {
 };
 
 export default PotionsContainer;
+
+/**
+ 
+ */
