@@ -8,6 +8,54 @@
   display: none;
 }
 
+.hamburger-button,
+.close-button {
+  width: 40px;
+  height: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all ease 0.3s
+}
+
+.nav_dropdown p {
+  color: #fff;
+  padding-top: 5px
+}
+
+.nav_dropdown p:hover {
+  background: #3f2055
+}
+
+.close-button #x-btn1 {
+  transform: rotate(45deg);
+  position: relative;
+  top: 11px;
+  transition: all ease 0.3s
+}
+
+.close-button #x-btn2 {
+  transform: rotate(-45deg);
+  position: relative;
+  bottom: 11px;
+  transition: all ease 0.3s
+}
+
+.hamburger-button span,
+.close-button span {
+  width: 40px;
+  height: 6px;
+  background-color: #523468;
+  border-radius: 3px;
+  transition: all ease 0.3s
+}
+
+.close-button span:nth-child(2) {
+  display: none;
+  transition: all ease 0.3s
+}
+
 .navigation {
   width: 100%;
   display: flex;
@@ -74,25 +122,33 @@
 .nav_menu_container {
   width: 100%;
   background: #523468;
-  height: 50px;
+  height: 65px;
 }
 
 .nav_menu {
   display: flex;
   align-items: center;
+  justify-content: center
+}
+
+.nav_menu span {
+  position: relative;
+  top: 4px;
 }
 
 .nav_menu li {
+  display: flex;
   list-style: none;
   font-weight: 500px;
   color: #fff;
   padding: 8px;
   border-radius: 7px;
+  margin: 2px
 }
 
 .nav_menu li:hover {
   transition: all ease 0.3s;
-  background: #674283;
+  background: #3f2055;
   cursor: pointer;
 }
 
@@ -124,7 +180,7 @@
 
 .menu_container {
   display: flex;
-  width: 1440px;
+  width: 70%;
   justify-content: space-around;
 }
 
@@ -135,7 +191,7 @@
 
 #signHover:hover {
   transition: all ease 0.3s;
-  background: #674283;
+  background: #3f2055;
   cursor: pointer;
 }
 
@@ -156,9 +212,20 @@
   .nav_dropdown p {
     display: none;
   }
+  .hamburger-button {
+    display: none;
+  }
 }
 
 @media (max-width: 780px) {
+  .break_line {
+    display:none
+  }
+
+  .close-button span:nth-child(2) {
+    display: block;
+  }
+
   .navigation {
     display: flex;
     justify-content: center;
@@ -221,7 +288,7 @@
     background-color: #523468;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.1rem;
     justify-content: flex-end;
     align-items: flex-start;
     z-index: 2;
@@ -234,9 +301,11 @@
     position: relative;
     display: flex;
     padding-left: 20px;
-    box-shadow: 0px 2px #fff;
+    box-shadow: 0px 1px #fff;
     font-size: 21px;
+    cursor:pointer
   }
+  
 
   .nav_dropdown_search {
     display: flex;
@@ -269,7 +338,7 @@
 /* Potions Container */
 
 .section_container {
-  width: 100%;
+  width: 97%;
   display: flex;
   justify-content: center;
   height: 83vh;

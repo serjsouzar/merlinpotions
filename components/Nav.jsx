@@ -11,14 +11,15 @@ const Nav = () => {
     <>
       <div className="navigation">
         <div className="navigation_container">
-          <Image
-            src="/assets/hamburguer_icon.png"
-            width={40}
-            height={40}
-            className="navigation_menu"
-            alt="hamburguer_icon"
+          <div
+            class="hamburger-button"
             onClick={() => setToggleDropDown((prev) => !prev)}
-          />
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
           <div className="nav_title">
             <h1 className={oswald.className}>
               MERLIN'S <span>POTIONS</span>
@@ -41,11 +42,16 @@ const Nav = () => {
               <input type="search" placeholder="Search our stock" />
             </div>
             <h3 className={ebgar.className}>
-              Free shipping on orders over $50
+              Free shipping <br className="break_line"/>on orders over $50
             </h3>
           </div>
           <div className="nav_bag">
-            <Image src="/assets/cauldron.png" alt="cauldron_icon" width={40} height={40} />
+            <Image
+              src="/assets/cauldron.png"
+              alt="cauldron_icon"
+              width={40}
+              height={40}
+            />
             <h4
               className={oswald.className}
               style={{ color: "#ccc", fontSize: "13px" }}
@@ -56,14 +62,15 @@ const Nav = () => {
           {toggleDropDown && (
             <div className="nav_dropdown">
               <div className="nav_dropdown_search">
-                <Image
-                  src="/assets/close.png"
-                  width={30}
-                  height={30}
-                  alt="close_icon"
-                  className="navigation_menu"
-                  onClick={() => setToggleDropDown((prev) => !prev)}
-                />
+                <div className="navigation_menu">
+                  <div
+                    class="close-button"
+                    onClick={() => setToggleDropDown((prev) => !prev)}
+                  >
+                    <span id="x-btn1"></span>
+                    <span id="x-btn2"></span>
+                  </div>
+                </div>
                 <div className="nav_search2">
                   <Image
                     src="/assets/search.png"
@@ -88,22 +95,26 @@ const Nav = () => {
       <div className="subTitle-background"></div>
       <div className="nav_menu_container">
         <div className="menu_container">
-        <div className="nav_menu">
-          <ul>
-            <li className={ebgar.className}>Potions ▾</li>
-            <li className={ebgar.className}>Ingredients ▾</li>
-            <li className={ebgar.className}>Books ▾</li>
-            <li className={ebgar.className}>Supplies ▾</li>
-            <li className={ebgar.className}>Charms ▾</li>
-            <li className={ebgar.className}>Clearance! </li>
-          </ul>
-        </div>
-        <div className="nav_sign">
-          <ul>
-            <li className={ebgar.className} id="signHover">Sign in</li>
-            <li className={ebgar.className}>or</li>
-            <li className={ebgar.className} id="signHover">Sign Up</li>
-          </ul>
+          <div className="nav_menu">
+            <ul>
+              <li><p className={ebgar.className}>Potions</p> <span>▾</span></li>
+              <li><p className={ebgar.className}>Ingredients</p><span>▾</span></li>
+              <li><p className={ebgar.className}>Books</p><span>▾</span></li>
+              <li><p className={ebgar.className}>Supplies</p><span>▾</span></li>
+              <li><p className={ebgar.className}>Charms</p><span>▾</span></li>
+              <li className={ebgar.className} style={{backgroundColor:"#3f2055"}}>Clearance! </li>
+            </ul>
+          </div>
+          <div className="nav_sign">
+            <ul>
+              <li className={ebgar.className} id="signHover">
+                Sign in
+              </li>
+              <li className={ebgar.className} style={{color:"#ccc"}}>or</li>
+              <li className={ebgar.className} id="signHover">
+                Sign Up
+              </li>
+            </ul>
           </div>
         </div>
       </div>
