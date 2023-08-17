@@ -16,30 +16,30 @@
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  transition: all ease 0.3s
+  transition: all ease 0.3s;
 }
 
 .nav_dropdown p {
   color: #fff;
-  padding-top: 5px
+  padding-top: 5px;
 }
 
 .nav_dropdown p:hover {
-  background: #3f2055
+  background: #3f2055;
 }
 
 .close-button #x-btn1 {
   transform: rotate(45deg);
   position: relative;
   top: 11px;
-  transition: all ease 0.3s
+  transition: all ease 0.3s;
 }
 
 .close-button #x-btn2 {
   transform: rotate(-45deg);
   position: relative;
   bottom: 11px;
-  transition: all ease 0.3s
+  transition: all ease 0.3s;
 }
 
 .hamburger-button span,
@@ -48,12 +48,12 @@
   height: 6px;
   background-color: #523468;
   border-radius: 3px;
-  transition: all ease 0.3s
+  transition: all ease 0.3s;
 }
 
 .close-button span:nth-child(2) {
   display: none;
-  transition: all ease 0.3s
+  transition: all ease 0.3s;
 }
 
 .navigation {
@@ -123,13 +123,13 @@
   width: 100%;
   background: #523468;
   height: 65px;
-  transition: all ease 0.6s
+  transition: all ease 0.6s;
 }
 
 .nav_menu {
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
 }
 
 .nav_menu span {
@@ -144,7 +144,7 @@
   color: #fff;
   padding: 8px;
   border-radius: 7px;
-  margin: 2px
+  margin: 2px;
 }
 
 .nav_menu li:hover {
@@ -206,9 +206,8 @@
   }
 }
 
-
 .section_container {
-  flex-direction: column
+  flex-direction: column;
 }
 
 @media (min-width: 781px) {
@@ -225,7 +224,7 @@
 
 @media (max-width: 780px) {
   .break_line {
-    display:none
+    display: none;
   }
 
   .close-button span:nth-child(2) {
@@ -309,9 +308,8 @@
     padding-left: 20px;
     box-shadow: 0px 1px #fff;
     font-size: 21px;
-    cursor:pointer
+    cursor: pointer;
   }
-  
 
   .nav_dropdown_search {
     display: flex;
@@ -347,7 +345,7 @@
   max-width: 964px;
   width: 100%;
   display: flex;
-  justify-content: center
+  justify-content: center;
 }
 
 .title_ {
@@ -355,7 +353,7 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  max-width: 771px
+  max-width: 771px;
 }
 
 .section_container {
@@ -379,7 +377,8 @@
 }
 
 .potions_section {
-  width: 1000px;
+  width: 100%;
+  max-width: 964px;
   height: 70vh;
   flex-direction: row;
   align-items: center;
@@ -388,6 +387,7 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+
 .potion_card {
   width: 174px;
   padding: 50px;
@@ -418,16 +418,15 @@
 }
 
 @media (max-width: 780px) {
-
-  .title_ { 
+  .title_ {
     justify-content: center;
-    height: 53px
+    height: 53px;
   }
-  
+
   .potion_section_title {
     width: 100%;
     display: flex;
-    justify-content: center
+    justify-content: center;
   }
 
   .potions_section {
@@ -486,7 +485,7 @@
   z-index: 10;
   position: relative;
   width: 680px;
-  height: 470px;
+  height: 500px;
   left: 30%;
   top: 20%;
   opacity: 1;
@@ -502,4 +501,110 @@
   right: 0;
   bottom: 0;
   background-color: rgba(150, 150, 150, 0.5);
+}
+
+.modal {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 95%;
+}
+
+.header_close-btn {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+.close_btn {
+  height: 23px;
+  width: 46px;
+  display: flex;
+  justify-content: end;
+}
+
+.close_btn button {
+  height: 25px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal_container_info {
+  display: flex;
+  justify-content: space-around;
+  height: 80%;
+  padding-bottom: 30px;
+}
+
+.modal_image {
+  width: 330px;
+  height: 330px;
+}
+
+.modal_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 72%;
+}
+
+.modal_info h3 {
+  width: 200px;
+}
+
+.modal_ingredients ul {
+  list-style: none;
+}
+
+.modal_add_cart {
+  padding-top: 15px;
+}
+
+.modal_add_cart button {
+  height: 35px;
+  padding: 8px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  background: #e44104;
+  cursor: pointer;
+}
+
+@media (max-width: 1042px) {
+  .modal_container_info {
+    height: 96%;
+    align-items: center;
+  }
+
+  .modal_ingredients {
+    width: 179px;
+  }
+
+  .modal_image {
+    width: 190px;
+    height: 190px;
+  }
+
+  .modal_effect p {
+    max-width: 179px;
+  }
+
+  .potion_modal {
+    max-width: 94%;
+    left: 13%;
+    top: 16%;
+  }
+
+  .modal_info {
+    height: 88%;
+  }
+}
+
+@media (max-width: 800px) {
+  .potion_modal {
+    left: 3%;
+  }
 }

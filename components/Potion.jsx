@@ -5,7 +5,7 @@ import ReactModal from "react-modal";
 import { useState } from "react";
 import PotionModal from "./PotionModal";
 
-const Potion = ({ potionName, potionImage, potionPrice, onRequestOpen }) => {
+const Potion = ({ potionName, potionImage, potionPrice, potionEffect, potionIngredients }) => {
 
   const [modalIsOpen, setIsOpen] = useState(false);
 
@@ -40,7 +40,13 @@ const Potion = ({ potionName, potionImage, potionPrice, onRequestOpen }) => {
         className="potion_modal"
         overlayClassName="overlay_modal"
       >
-        <PotionModal onRequestClose={closeModal} name={potionName}/>
+        <PotionModal 
+        onRequestClose={closeModal}
+         name={potionName} 
+         price={potionPrice}
+         image={potionImage} 
+         effect={potionEffect} 
+         ingredients={potionIngredients}/>
       </ReactModal>
     </>
   );

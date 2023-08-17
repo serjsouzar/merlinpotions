@@ -1,6 +1,6 @@
 import Potion from "./Potion";
 
-const PotionsContainer = ({ potions, onRequestOpen }) => {
+const PotionsContainer = ({ potions }) => {
   return (
     <section className="section_container">
       <div className="potion_section_title">
@@ -17,6 +17,8 @@ const PotionsContainer = ({ potions, onRequestOpen }) => {
               potionName={potion.name}
               potionImage={potion.image}
               potionPrice={potion.price}
+              potionEffect={potion.effect}
+              potionIngredients={potion.ingredients}
             />
           </li>
         ))}

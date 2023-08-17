@@ -12,7 +12,7 @@ const Nav = () => {
       <div className="navigation">
         <div className="navigation_container">
           <div
-            class="hamburger-button"
+            className="hamburger-button"
             onClick={() => setToggleDropDown((prev) => !prev)}
           >
             <span></span>
@@ -64,7 +64,7 @@ const Nav = () => {
               <div className="nav_dropdown_search">
                 <div className="navigation_menu">
                   <div
-                    class="close-button"
+                    className="close-button"
                     onClick={() => setToggleDropDown((prev) => !prev)}
                   >
                     <span id="x-btn1"></span>
