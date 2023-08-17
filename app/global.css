@@ -595,7 +595,8 @@
   .potion_modal {
     max-width: 94%;
     left: 13%;
-    top: 16%;
+    top: 4%;
+    height: 600px;
   }
 
   .modal_info {
