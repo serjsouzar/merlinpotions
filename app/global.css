@@ -403,6 +403,7 @@
   list-style: none;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin-bottom: 30px
 }
 
 .potion_card {
@@ -413,7 +414,6 @@
 }
 
 .potion_card:hover {
-  transform: scale(0.9);
   transition: all ease 0.1s;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.2);
@@ -512,6 +512,7 @@
   opacity: 1;
   background-color: #fff;
   max-width: 50%;
+  outline: none
 }
 
 .overlay_modal {
