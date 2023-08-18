@@ -27,7 +27,6 @@
   transition: all ease 0.3s;
 }
 
-
 .nav_dropdown p {
   color: #fff;
   padding-top: 5px;
@@ -311,7 +310,7 @@
     align-items: flex-start;
     z-index: 2;
     overflow-x: hidden;
-    transition: all ease 0.3s
+    transition: all ease 0.3s;
   }
 
   .nav_dropdown p {
@@ -373,7 +372,7 @@
 .section_container {
   width: auto;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 30px;
   gap: 30px;
@@ -389,7 +388,7 @@
 .potion_name_container {
   width: 199px;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   gap: 2px;
 }
@@ -454,6 +453,7 @@
     transition: all ease 0.3s;
     width: 100%;
     height: 100vh;
+    gap: 43px;
   }
 
   .potion_image {
@@ -496,18 +496,23 @@
   }
 }
 
+@media (max-width: 780px) {
+  .potions_section {
+    gap: 0px;
+    transition: all ease 0.2s;
+  }
+}
+
 /* Potion Modal */
 
 .ReactModal__Overlay {
   opacity: 0;
   transition: opacity 500ms ease-in-out;
 }
-
-.ReactModal__Overlay--after-open{
+.ReactModal__Overlay--after-open {
   opacity: 1;
 }
-
-.ReactModal__Overlay--before-close{
+.ReactModal__Overlay--before-close {
   opacity: 0;
 }
 
@@ -555,7 +560,7 @@
   height: 23px;
   width: 46px;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .close_btn button {
@@ -644,14 +649,160 @@
 
 @media (max-width: 800px) {
   .potion_modal {
-    left: 3%;
+    left: 2%;
   }
 }
 
 /* Footer Modal */
 
+.footer_btn {
+  height: 35px;
+  padding: 8px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  background: #e44104;
+  cursor: pointer;
+
+  width: 100px;
+}
+
 .footer_container {
   width: 100%;
   background: #ccc;
+  height: 226px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer_info {
+  display: flex;
+  justify-content: space-around;
+  max-width: 768px;
+  width: 100%;
+}
+
+.links_container {
+  flex-direction: column;
+  max-width: 375px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  transition: all ease 0.2s;
+}
+
+.links_container ul {
+  display: flex;
+  list-style: none;
+  max-width: 354px;
+  justify-content: left;
+  font-size: 18px;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  font-family: sans-serif;
+}
+
+.links_container li {
+  width: 102px;
+  color: #e44104;
+}
+
+.links_container p {
+  padding-bottom: 20px;
+  font-family: sans-serif;
+  color: #817e7e;
+  width: 322px;
+}
+
+.links_container li:nth-child(2) {
+  width: 126px;
+}
+
+.social_media_container {
+  width: 354px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 20px;
+}
+
+.newsletter_container {
+  width: 375px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 3px;
+}
+
+.newsletter {
+  font-family: sans-serif;
+  background: #fff;
+  border-radius: 5px;
   height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px
+}
+
+.newsletter label {
+  font-size: 15px
+}
+
+.input_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input_container input {
+  width: 231px;
+  border-radius: 4px;
+  padding: 3px;
+  outline: none
+}
+
+@media (max-width: 1042px) {
+
+  .footer_container {
+    height: 283px
+  }
+
+  .footer_info {
+    max-width: 100%;
+    flex-wrap: wrap-reverse
+  }
+
+  .links_container {
+    max-width: 100%;
+  }
+
+  .social_media_container {
+    justify-content: center;
+    width: 100%;
+  }
+  .links_container ul {
+    display: none;
+  }
+  .links_container p {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .newsletter_container{
+    padding-bottom: 0;
+    justify-content: center
+  }
+  .newsletter {
+    height: 115px
+  }
+  .newsletter p {
+    font-size: 16px
+  }
+  .newsletter label {
+    font-size: 12px
+  }
+  .input_container {
+    width: 299px;
+    gap: 7px;
+  }
 }

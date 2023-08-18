@@ -26,6 +26,7 @@ const Potion = ({ potionName, potionImage, potionPrice, potionEffect, potionIngr
           height={180}
           alt={potionName}
           src={potionImage}
+          priority={true}
         />
         <div className="potion_name_container">
           <h3 className="potion_name">{potionName}</h3>-
