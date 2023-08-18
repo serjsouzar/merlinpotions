@@ -90,6 +90,19 @@ const Nav = () => {
             <p className={ebgar.className}>Supplies</p>
             <p className={ebgar.className}>Charms</p>
             <p className={ebgar.className}>Clearance!</p>
+            <div className="nav_sign_dropdown">
+            <ul>
+              <li className={ebgar.className} id="signHover">
+                Sign in
+              </li>
+              <li className={ebgar.className} style={{ color: "#ccc" }}>
+                or
+              </li>
+              <li className={ebgar.className} id="signHover">
+                Sign Up
+              </li>
+            </ul>
+          </div>
           </div>
         </div>
       </div>
