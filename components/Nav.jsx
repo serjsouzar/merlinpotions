@@ -7,14 +7,18 @@ import { oswald, ebgar } from "@/app/fonts";
 const Nav = () => {
   const [toggleDropDown, setToggleDropDown] = useState(false);
 
+  function dropdownMenu() {
+    setToggleDropDown((prev) => !prev);
+    const dropdown = document.querySelector(".nav_dropdown");
+    toggleDropDown === true ? (dropdown.style.top = "0%") : "";
+    toggleDropDown === false ? (dropdown.style.top = "-100%") : "";
+  }
+
   return (
     <>
       <div className="navigation">
         <div className="navigation_container">
-          <div
-            className="hamburger-button"
-            onClick={() => setToggleDropDown((prev) => !prev)}
-          >
+          <div className="hamburger-button" onClick={() => dropdownMenu()}>
             <span></span>
             <span></span>
             <span></span>
@@ -42,7 +46,8 @@ const Nav = () => {
               <input type="search" placeholder="Search our stock" />
             </div>
             <h3 className={ebgar.className}>
-              Free shipping <br className="break_line"/>on orders over $50
+              Free shipping <br className="break_line" />
+              on orders over $50
             </h3>
           </div>
           <div className="nav_bag">
@@ -59,37 +64,33 @@ const Nav = () => {
               BAG:{" "}
             </h4>
           </div>
-          {toggleDropDown && (
-            <div className="nav_dropdown">
-              <div className="nav_dropdown_search">
-                <div className="navigation_menu">
-                  <div
-                    className="close-button"
-                    onClick={() => setToggleDropDown((prev) => !prev)}
-                  >
-                    <span id="x-btn1"></span>
-                    <span id="x-btn2"></span>
-                  </div>
-                </div>
-                <div className="nav_search2">
-                  <Image
-                    src="/assets/search.png"
-                    width={20}
-                    height={20}
-                    className="search_icon"
-                    alt="search_icon"
-                  />
-                  <input type="search" placeholder="Search our stock" />
+
+          <div className="nav_dropdown">
+            <div className="nav_dropdown_search">
+              <div className="navigation_menu">
+                <div className="close-button" onClick={() => dropdownMenu()}>
+                  <span id="x-btn1"></span>
+                  <span id="x-btn2"></span>
                 </div>
               </div>
-              <p className={ebgar.className}>Potions</p>
-              <p className={ebgar.className}>Ingredients</p>
-              <p className={ebgar.className}>Books</p>
-              <p className={ebgar.className}>Supplies</p>
-              <p className={ebgar.className}>Charms</p>
-              <p className={ebgar.className}>Clearance!</p>
+              <div className="nav_search2">
+                <Image
+                  src="/assets/search.png"
+                  width={20}
+                  height={20}
+                  className="search_icon"
+                  alt="search_icon"
+                />
+                <input type="search" placeholder="Search our stock" />
+              </div>
             </div>
-          )}
+            <p className={ebgar.className}>Potions</p>
+            <p className={ebgar.className}>Ingredients</p>
+            <p className={ebgar.className}>Books</p>
+            <p className={ebgar.className}>Supplies</p>
+            <p className={ebgar.className}>Charms</p>
+            <p className={ebgar.className}>Clearance!</p>
+          </div>
         </div>
       </div>
       <div className="subTitle-background"></div>
@@ -97,12 +98,31 @@ const Nav = () => {
         <div className="menu_container">
           <div className="nav_menu">
             <ul>
-              <li><p className={ebgar.className}>Potions</p> <span>▾</span></li>
-              <li><p className={ebgar.className}>Ingredients</p><span>▾</span></li>
-              <li><p className={ebgar.className}>Books</p><span>▾</span></li>
-              <li><p className={ebgar.className}>Supplies</p><span>▾</span></li>
-              <li><p className={ebgar.className}>Charms</p><span>▾</span></li>
-              <li className={ebgar.className} style={{backgroundColor:"#3f2055"}}>Clearance! </li>
+              <li>
+                <p className={ebgar.className}>Potions</p> <span>▾</span>
+              </li>
+              <li>
+                <p className={ebgar.className}>Ingredients</p>
+                <span>▾</span>
+              </li>
+              <li>
+                <p className={ebgar.className}>Books</p>
+                <span>▾</span>
+              </li>
+              <li>
+                <p className={ebgar.className}>Supplies</p>
+                <span>▾</span>
+              </li>
+              <li>
+                <p className={ebgar.className}>Charms</p>
+                <span>▾</span>
+              </li>
+              <li
+                className={ebgar.className}
+                style={{ backgroundColor: "#3f2055" }}
+              >
+                Clearance!{" "}
+              </li>
             </ul>
           </div>
           <div className="nav_sign">
@@ -110,7 +130,9 @@ const Nav = () => {
               <li className={ebgar.className} id="signHover">
                 Sign in
               </li>
-              <li className={ebgar.className} style={{color:"#ccc"}}>or</li>
+              <li className={ebgar.className} style={{ color: "#ccc" }}>
+                or
+              </li>
               <li className={ebgar.className} id="signHover">
                 Sign Up
               </li>
