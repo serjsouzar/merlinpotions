@@ -1,8 +1,9 @@
 "use client";
 
-import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import PotionsContainer from "@/components/PotionsContainer";
 import { useEffect, useState } from "react";
+import Loading from "./loading";
 
 const Home = () => {
   const [potions, setPotions] = useState(null);
@@ -17,8 +18,17 @@ const Home = () => {
 
   return (
     <>
-      <Nav />
-      <PotionsContainer potions={potions} />
+      {potions !== null ? (
+        <>
+          {" "}
+          <PotionsContainer potions={potions} />
+          <Footer />
+        </>
+      ) : (
+        <>
+          <Loading />
+        </>
+      )}
     </>
   );
 };
