@@ -1,34 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![01](https://github.com/serjsouzar/merlinpotions/assets/61920035/1d1bf38f-a3b9-47fc-b061-ff0cb6b979cf)
 
-## Getting Started
 
-First, run the development server:
+![02](https://github.com/serjsouzar/merlinpotions/assets/61920035/c60fa96f-434e-46a9-9102-92e654f40bd7)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![3](https://github.com/serjsouzar/merlinpotions/assets/61920035/bdd7e412-add6-462c-93a6-d4100ed9ba52)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![4](https://github.com/serjsouzar/merlinpotions/assets/61920035/cd28d948-e3aa-42c5-ae26-f9533a9ea780)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+![5](https://github.com/serjsouzar/merlinpotions/assets/61920035/022a7a70-8d84-43fe-819f-8dc2385994d4)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![6](https://github.com/serjsouzar/merlinpotions/assets/61920035/dabf5a33-48df-46db-a145-877dc0a93101)
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
