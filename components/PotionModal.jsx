@@ -1,5 +1,7 @@
+"use client"
+
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 
 const PotionModal = ({
   name,
@@ -8,8 +10,32 @@ const PotionModal = ({
   effect,
   ingredients,
   onRequestClose,
+  setCartSize,
+  notification,
+  setNotification
 }) => {
+
+  function onHandleCartBtn() {
+    setCartSize((prev) => prev = prev + 1) 
+    setNotification((prev => [...prev, notification])) 
+  }
+
+  console.log(notification)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const removed = notification.length !== 1 ? notification.slice(0, -1) : [];
+      setNotification(removed)
+    }, 1500)
+
+    return function cleanTimer(){
+      clearTimeout(timer)
+    }
+  },
+  [notification])
+
   return (
+    
     <div className="modal">
       <header className="header_close-btn">
         <div className="close_btn">
@@ -50,7 +76,7 @@ const PotionModal = ({
           </div>
 
           <div className="modal_add_cart">
-          <button>ADD TO CART</button>    
+          <button onClick={() => onHandleCartBtn()}>ADD TO CART</button>    
           </div>   
         </div>
       </section>

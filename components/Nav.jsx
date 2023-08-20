@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { oswald, ebgar } from "@/app/fonts";
 
-const Nav = () => {
+const Nav = ({cartSize, setCartSize}) => {
   const [toggleDropDown, setToggleDropDown] = useState(false);
 
   function dropdownMenu() {
@@ -69,7 +69,7 @@ const Nav = () => {
               className={oswald.className}
               style={{ color: "#ccc", fontSize: "13px" }}
             >
-              BAG:{" "}
+              BAG: <span style={{color:"#e44104"}}>{cartSize}</span>
             </h4>
           </div>
 

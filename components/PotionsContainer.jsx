@@ -1,6 +1,12 @@
 import Potion from "./Potion";
 
-const PotionsContainer = ({ potions }) => {
+const PotionsContainer = ({
+  potions,
+  cartSize,
+  setCartSize,
+  setNotification,
+  notification,
+}) => {
   return (
     <section className="section_container">
       <div className="potion_section_title">
@@ -14,6 +20,10 @@ const PotionsContainer = ({ potions }) => {
         {potions?.map((potion) => (
           <li key={potion.id}>
             <Potion
+              cartSize={cartSize}
+              setCartSize={setCartSize}
+              notification={notification}
+              setNotification={setNotification}
               potionName={potion.name}
               potionImage={potion.image}
               potionPrice={potion.price}
