@@ -36,18 +36,34 @@
   background: #3f2055;
 }
 
-.close-button #x-btn1 {
+.hamburger-button .hamburguer_close1 {
   transform: rotate(45deg);
   position: relative;
   top: 11px;
   transition: all ease 0.3s;
+  z-index:11
 }
 
-.close-button #x-btn2 {
+.hamburger-button .hamburguer_close2 {
+  transition: all ease 0.2s;
+  opacity: 0;
+  z-index:11
+}
+
+.hamburger-button .hamburguer_close3 {
   transform: rotate(-45deg);
   position: relative;
   bottom: 11px;
   transition: all ease 0.3s;
+  z-index:11
+}
+
+.hamburger-button {
+  z-index:11
+}
+
+.close-button  {
+  opacity: 0
 }
 
 .hamburger-button span,
@@ -291,6 +307,8 @@
     width: 230px;
     display: flex;
     align-items: center;
+    position: relative;
+    bottom: 7px
   }
 
   .nav_title {
@@ -348,6 +366,7 @@
     align-items: center;
     gap: 15px;
     padding: 20px;
+    padding-bottom: 8px;
     background: #fff;
     width: 100%;
   }

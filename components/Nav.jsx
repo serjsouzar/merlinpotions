@@ -10,8 +10,16 @@ const Nav = () => {
   function dropdownMenu() {
     setToggleDropDown((prev) => !prev);
     const dropdown = document.querySelector(".nav_dropdown");
-    toggleDropDown === true ? (dropdown.style.top = "0%") : "";
-    toggleDropDown === false ? (dropdown.style.top = "-100%") : "";
+    const hmb_btn1 = document.querySelector(".hamburguer_icon1");
+    const hmb_btn2 = document.querySelector(".hamburguer_icon2");
+    const hmb_btn3 = document.querySelector(".hamburguer_icon3");
+
+    toggleDropDown !== true ? (dropdown.style.top = "0%") : "";
+    toggleDropDown !== false ? (dropdown.style.top = "-100%") : "";
+
+    hmb_btn1.classList.toggle("hamburguer_close1");
+    hmb_btn2.classList.toggle("hamburguer_close2");
+    hmb_btn3.classList.toggle("hamburguer_close3");
   }
 
   return (
@@ -19,9 +27,9 @@ const Nav = () => {
       <div className="navigation">
         <div className="navigation_container">
           <div className="hamburger-button" onClick={() => dropdownMenu()}>
-            <span></span>
-            <span></span>
-            <span></span>
+            <span className="hamburguer_icon1"></span>
+            <span className="hamburguer_icon2"></span>
+            <span className="hamburguer_icon3"></span>
           </div>
 
           <div className="nav_title">
@@ -91,18 +99,18 @@ const Nav = () => {
             <p className={ebgar.className}>Charms</p>
             <p className={ebgar.className}>Clearance!</p>
             <div className="nav_sign_dropdown">
-            <ul>
-              <li className={ebgar.className} id="signHover">
-                Sign in
-              </li>
-              <li className={ebgar.className} style={{ color: "#ccc" }}>
-                or
-              </li>
-              <li className={ebgar.className} id="signHover">
-                Sign Up
-              </li>
-            </ul>
-          </div>
+              <ul>
+                <li className={ebgar.className} id="signHover">
+                  Sign in
+                </li>
+                <li className={ebgar.className} style={{ color: "#ccc" }}>
+                  or
+                </li>
+                <li className={ebgar.className} id="signHover">
+                  Sign Up
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
