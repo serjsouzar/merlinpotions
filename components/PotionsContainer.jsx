@@ -33,6 +33,7 @@ const PotionsContainer = ({
           </li>
         ))}
       </ul>
+      
     </section>
   );
 };

@@ -7,7 +7,6 @@ import Loading from "./loading";
 import Nav from "@/components/Nav";
 import Notification from "@/components/Notification";
 
-
 const Home = () => {
   const [potions, setPotions] = useState(null);
   const [cartSize, setCartSize] = useState(0);
@@ -23,11 +22,11 @@ const Home = () => {
 
   return (
     <>
+    
       {potions !== null ? (
         <>
           {" "}
           <Nav cartSize={cartSize} setCartSize={setCartSize} />
-          { notification.length > 0 &&  <Notification />}
           <PotionsContainer
             notification={notification}
             setNotification={setNotification}
@@ -35,6 +34,7 @@ const Home = () => {
             cartSize={cartSize}
             setCartSize={setCartSize}
           />
+          
           <Footer />
         </>
       ) : (

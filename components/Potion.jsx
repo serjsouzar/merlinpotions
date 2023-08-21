@@ -4,6 +4,7 @@ import React from "react";
 import ReactModal from "react-modal";
 import { useState } from "react";
 import PotionModal from "./PotionModal";
+import Notification from "./Notification";
 
 const Potion = ({
   potionName,
@@ -42,7 +43,7 @@ const Potion = ({
           <p className="potion_price">${potionPrice}</p>
         </div>
       </div>
-
+      
       <ReactModal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -50,6 +51,7 @@ const Potion = ({
         className="potion_modal"
         overlayClassName="overlay_modal"
       >
+        
         <PotionModal
           cartSize={cartSize}
           setCartSize={setCartSize}
@@ -63,6 +65,7 @@ const Potion = ({
           setNotification={setNotification}
         />
       </ReactModal>
+      
     </>
   );
 };

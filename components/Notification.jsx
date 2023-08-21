@@ -4,7 +4,7 @@ const Notification = () => {
   return (
     <div className="notification_container">
       <div className="notification">
-        <p style={{ color: "#fff"}}>Item foi adicionado ao carrinho</p>
+        <p style={{ color: "#fff" }}>Potion added to Bag !</p>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import React, { useEffect } from "react";
+import Notification from "./Notification";
 
 const PotionModal = ({
   name,
@@ -38,6 +39,7 @@ const PotionModal = ({
     
     <div className="modal">
       <header className="header_close-btn">
+        { notification.length > 0 &&  <Notification />}
         <div className="close_btn">
           <button onClick={onRequestClose}>X</button>
         </div>
@@ -77,7 +79,7 @@ const PotionModal = ({
 
           <div className="modal_add_cart">
           <button onClick={() => onHandleCartBtn()}>ADD TO CART</button>    
-          </div>   
+          </div>           
         </div>
       </section>
     </div>
